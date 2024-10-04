@@ -19,11 +19,11 @@ description = 'CLI for MySQL Database. With auto-completion and syntax highlight
 install_requirements = [
     'click >= 7.0',
     # Pinning cryptography is not needed after paramiko 2.11.0. Correct it
-    'cryptography >= 1.0.0',
+    'cryptography == 42.0.7',
     # 'Pygments>=1.6,<=2.11.1',
     'Pygments>=1.6',
     'prompt_toolkit>=3.0.6,<4.0.0',
-    'PyMySQL >= 0.9.2',
+    'PyMySQL == 1.1.0',
     'sqlparse>=0.3.0,<0.5.0',
     'sqlglot>=5.1.3',
     'configobj >= 5.0.5',
