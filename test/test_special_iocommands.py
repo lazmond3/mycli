@@ -230,7 +230,7 @@ def test_watch_query_full():
     expected_value = "1"
     query = "SELECT {0!s}".format(expected_value)
     expected_title = '> {0!s}'.format(query)
-    expected_results = 5
+    expected_results = 6
     ctrl_c_process = send_ctrl_c(wait_interval)
     with db_connection().cursor() as cur:
         results = list(
