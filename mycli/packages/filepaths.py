@@ -94,13 +94,13 @@ def dir_path_exists(path):
 
 
 def guess_socket_location():
-    """Try to guess the location of the default mysql socket file."""
+    """Try to guess the location of the default mysql socket file, excluding 'mysqlx.sock'."""
     socket_dirs = filter(os.path.exists, DEFAULT_SOCKET_DIRS)
     for directory in socket_dirs:
         for r, dirs, files in os.walk(directory, topdown=True):
             for filename in files:
                 name, ext = os.path.splitext(filename)
-                if name.startswith("mysql") and ext in ('.socket', '.sock'):
+                if name.startswith("mysql") and name != "mysqlx" and ext in ('.socket', '.sock'):
                     return os.path.join(r, filename)
             dirs[:] = [d for d in dirs if d.startswith("mysql")]
     return None

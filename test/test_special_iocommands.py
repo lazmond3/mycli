@@ -92,7 +92,6 @@ def test_tee_command():
             os.remove(f.name)
     except Exception as e:
         print(f"An error occurred while attempting to delete the file: {e}")
-    
 
 
 def test_tee_command_error():
