@@ -59,7 +59,7 @@ jobs:
           PYTEST_PASSWORD: root
           PYTEST_HOST: 127.0.0.1
         run: |
-          ./setup.py test --pytest-args="--cov-report= --cov=mycli"
+          pytest test --cov-report --cov=mycli 
 
       - name: Lint
         run: |
